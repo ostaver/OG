@@ -39,7 +39,7 @@ body {
     z-index: 0;
     width: 100%;
     padding-top: 60%;
-    background: url(Gallery/_CHE0074.webp) center center no-repeat;
+    background: url(_CHE0074.webp) center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -427,3 +427,4 @@ h3 {
     }
 
 }
+
