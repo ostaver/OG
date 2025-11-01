@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Anton&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    background: #232323;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.opaque {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: #d2d6f1;
+}
+
+.lt-ie9 .opaque {
+    display: none;
+}
+
+.feature {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    padding-top: 60%;
+    background: url(GALLERY/_CHE0074.webp) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-box-shadow:
+        0 -100px 80px -40px #232323 inset,
+        0 -200px 120px -60px rgba(35, 35, 35, 0.8) inset,
+        0 -300px 160px -80px rgba(35, 35, 35, 0.6) inset;
+    -moz-box-shadow:
+        0 -100px 80px -40px #232323 inset,
+        0 -200px 120px -60px rgba(35, 35, 35, 0.8) inset,
+        0 -300px 160px -80px rgba(35, 35, 35, 0.6) inset;
+    box-shadow:
+        0 -100px 80px -40px #232323 inset,
+        0 -200px 120px -60px rgba(35, 35, 35, 0.8) inset,
+        0 -300px 160px -80px rgba(35, 35, 35, 0.6) inset;
+}
+
+/* ----------------------- START ------------- */
+.content {
+    position: relative;
+    z-index: 1;
+    padding-top: 10%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    justify-content: right;
+}
+
+.OG_top {
+    position:absolute;
+    left: 20px; 
+    font-family: 'fantasy'; 
+    font-size: 2.2rem; 
+    top: 5px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.OG_top:hover {
+    transform: translateY(-2px);
+}
+
+.header-navbar {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.header-navbar>ul {
+    display: flex;
+}
+
+.header-navbar ul>li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.25rem;
+}
+
+.OGNEN_INTRO {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 7rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 0.9;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.OGNEN_INTRO_UNDER {
+    text-align: center;
+    margin: 0;
+}
+
+.OGNEN_INTRO::after {
+    content: '';
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 347px;
+    width: 40%;
+    height: 2px;
+    background: white;
+    box-shadow: 0 0px 12px 5px rgba(255, 255, 255, 0.6);
+}
+
+#ABOUT {
+    width: 100%;
+    margin-top: 20%;
+}
+
+.about-title {
+    text-align: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-family: cursive;
+    width: 40%;
+    text-justify: distribute;
+    margin: 0;
+}
+
+span {
+    color: rgba(255, 0, 0, 0.8);
+    box-shadow: 2px 2px 20px 10px #ff000021,
+        2px 2px 50px 10px #ff000021 inset;
+}
+
+@media only screen and (max-width: 600px) {
+    .feature {
+        display: none;
+    }
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+.sect {
+    text-align: center;
+    font-family: 'Oswald';
+    font-size: 3.2rem;
+}
+
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header-navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.header-navbar ul li a:hover {
+    color: #4a6b8a;
+    background: linear-gradient(135deg, rgba(19, 36, 64, 0.2), rgba(74, 107, 138, 0.1));
+    box-shadow: 
+        0 0 15px rgba(19, 36, 64, 0.4),
+        0 0 25px rgba(74, 107, 138, 0.3),
+        0 0 35px rgba(106, 142, 171, 0.2);
+    text-shadow: 
+        0 0 8px rgba(19, 36, 64, 0.8),
+        0 0 16px rgba(74, 107, 138, 0.6);
+    transform: translateY(-2px);
+}
+
+.header-navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #132440, #4a6b8a, #6a8eab);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.header-navbar ul li a:hover::before {
+    width: 100%;
+}
+
+.header-navbar ul li a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(19, 36, 64, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.header-navbar ul li a:hover::after {
+    width: 120%;
+    height: 120%;
+    opacity: 0.6;
+}
+
+.header-navbar ul li a:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 0 10px rgba(19, 36, 64, 0.6),
+        0 0 20px rgba(74, 107, 138, 0.4);
+}
+
+.header-navbar ul li {
+    transition: transform 0.2s ease;
+}
+
+.header-navbar ul li:hover {
+    transform: scale(1.05);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.about-grid > div > p {
+    width: 100%;
+}
+/* Footer Styling */
+.footer {
+    background: linear-gradient(135deg, #132440, #1a2f47);
+    color: #fff;
+    padding: 3rem 0 1rem 0;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4a6b8a, transparent);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.8rem;
+    color: #4a6b8a;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.footer-section h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: #6a8eab;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-section ul li a:hover {
+    color: #4a6b8a;
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(74, 107, 138, 0.3);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    background: rgba(74, 107, 138, 0.2);
+    border-color: #4a6b8a;
+    color: #4a6b8a;
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(74, 107, 138, 0.2);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive footer */
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem;
+        padding: 0 1rem;
+    }
+}
