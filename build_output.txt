@@ -1,0 +1,43 @@
+
+> og-angular-site@0.0.0 build
+> ng build
+
+[33m❯[39m Building...
+[32m✔[39m Building...
+Application bundle generation failed. [1.478 seconds] - 2026-03-04T22:41:12.496Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG2012: Component imports must be standalone components, directives, pipes, or must be NgModules.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/app.component.ts:23:4:
+[37m      23 │     [32mLinksComponent[37m,
+         ╵     [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2305: Module '"@angular/common"' has no exported member 'DomSanitizer'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/links/links.component.ts:2:23:
+[37m      2 │ import { CommonModule, [32mDomSanitizer[37m, SafeResourceUrl } from '@angul...
+        ╵                        [32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2305: Module '"@angular/common"' has no exported member 'SafeResourceUrl'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/links/links.component.ts:2:37:
+[37m      2 │ ...mmonModule, DomSanitizer, [32mSafeResourceUrl[37m } from '@angular/common';
+        ╵                              [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG2003: No suitable injection token for parameter 'sanitizer' of class 'LinksComponent'.
+  Consider using the @Inject decorator to specify an injection token.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/components/links/links.component.ts:16:46:
+[37m      16 │ ...tructor(private el: ElementRef, private [32msanitizer[37m: DomSanitizer) {
+         ╵                                            [32m~~~~~~~~~[0m
+
+  This type does not have a value, so it cannot be used as injection token.
+
+    src/app/components/links/links.component.ts:16:57:
+[37m      16 │ ...tructor(private el: ElementRef, private sanitizer: [32mDomSanitizer[37m) {
+         ╵                                                       [32m~~~~~~~~~~~~[0m
+
+[39m[22m

@@ -1,0 +1,30 @@
+<div class="hero">
+  <!-- Dynamic Image Container -->
+  <div class="feature-container" 
+       [style.opacity]="opacity">
+    <img src="assets/GALLERY/_CHE0074.webp" 
+         alt="Ognen Stefanovski - Macedonian Decathlete in action" 
+         class="feature-img" 
+         fetchpriority="high" 
+         decoding="async" 
+         loading="eager"
+         [style.transform]="'scale(' + scale + ')'"
+         [style.filter]="'blur(' + blur + 'px)'">
+    <div class="opaque"></div>
+  </div>
+
+  <!-- Content Layer overlay -->
+  <div class="hero-content">
+    <h1 class="OGNEN_INTRO fade-in visible fadeOG">OGNEN STEFANOVSKI</h1>
+    <h3 class="OGNEN_INTRO_UNDER fade-in visible fadeOGUNDER">
+      <i>But they who wait for the Lord shall renew their strength; they
+        shall mount up with wings like eagles; they shall run and not be weary; they shall walk and not faint.
+        <br><b>Isaiah 40:31</b></i>
+    </h3>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-arrow"></div>
+  </div>
+</div>

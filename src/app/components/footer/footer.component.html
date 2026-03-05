@@ -1,0 +1,53 @@
+<footer class="footer" id="CONTACT">
+  <div class="footer-glow"></div>
+  <div class="container section">
+    <h2 class="section-title fade-in" [class.visible]="isVisible">Contact</h2>
+    
+    <div class="footer-content fade-in" [class.visible]="isVisible">
+      <div class="footer-section">
+        <h3>OGNEN STEFANOVSKI<br><span class="x-divider">X</span><span class="ostaver-accent">OSTAVER</span></h3>
+        <p>This website is made and presented by <u class="highlight">Filip Mladenovic</u> aka
+          <b class="highlight">OSTAVER</b>. This project is a collaboration between him and Ognen Stefanovski.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a (click)="scrollTo('ABOUT')">About</a></li>
+          <li><a (click)="scrollTo('RECORDS')">Records</a></li>
+          <li><a (click)="scrollTo('GALLERY')">Gallery</a></li>
+          <li><a (click)="scrollTo('LINKS')">Links</a></li>
+          <li><a (click)="scrollTo('CONTACT')">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Social Media</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/ognen_stefanovski/" class="social-link" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@OgnenOG" class="social-link" target="_blank">YouTube</a>
+          <a href="mailto:stefanovski.ognen@gmail.com" class="social-link">Email</a>
+        </div>
+        <div class="email-note">Contact: ognenstefanovski2004&#64;gmail.com</div>
+      </div>
+
+      <div class="footer-section">
+        <h4>World Athletics Profile</h4>
+        <div class="social-links">
+          <a href="https://worldathletics.org/athletes/north-macedonia/ognen-stefanovski-15015993"
+             class="social-link wa-link" target="_blank">
+             Ognen STEFANOVSKI | Profile
+          </a>
+        </div>
+        <div class="email-note">(All achievements, career bests, and results)</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom fade-in" [class.visible]="isVisible">
+      <p>&copy; {{ currentYear }} OGNEN STEFANOVSKI. All rights reserved. | Powered by: 
+        <a href="https://www.youtube.com/@ostaver3360" target="_blank" class="footer-ostaver">OSTAVER</a>
+      </p>
+    </div>
+  </div>
+</footer>

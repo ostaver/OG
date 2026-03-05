@@ -1,0 +1,59 @@
+<section id="GALLERY" class="section container">
+  <h2 class="section-title fade-in" [class.visible]="isVisible">Gallery</h2>
+  
+  <div class="image-grid fade-in" [class.visible]="isVisible">
+    <div class="image-grid-item" 
+         *ngFor="let img of displayedImages; let i = index"
+         (click)="openLightbox(i)"
+         [style.animationDelay]="(i % 3) * 0.1 + 's'">
+      
+      <img [src]="img.src" [alt]="img.title" loading="lazy">
+      
+      <div class="image-overlay">
+        <h4>{{ img.title }}</h4>
+        <p>{{ img.desc }}</p>
+      </div>
+    
+    </div>
+  </div>
+
+  <div class="gallery-controls fade-in" [class.visible]="isVisible" *ngIf="images.length > initialCount">
+    <button class="btn-elegant" (click)="toggleView()">
+      {{ showAll ? 'Load Less' : 'Load More' }}
+    </button>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" 
+     *ngIf="lightboxOpen" 
+     (click)="closeLightbox()" 
+     (keydown)="onKeydown($event)"
+     tabindex="0"
+     #lightboxRef>
+  <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close">&times;</button>
+  
+  <button class="lightbox-nav lightbox-prev" 
+          (click)="prevImage($event)" 
+          *ngIf="displayedImages.length > 1"
+          aria-label="Previous image">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+
+  <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <img [src]="displayedImages[lightboxIndex]?.src" 
+         [alt]="displayedImages[lightboxIndex]?.title"
+         class="lightbox-img">
+    <div class="lightbox-caption">
+      <h4>{{ displayedImages[lightboxIndex]?.title }}</h4>
+      <p>{{ displayedImages[lightboxIndex]?.desc }}</p>
+    </div>
+  </div>
+
+  <button class="lightbox-nav lightbox-next" 
+          (click)="nextImage($event)" 
+          *ngIf="displayedImages.length > 1"
+          aria-label="Next image">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>

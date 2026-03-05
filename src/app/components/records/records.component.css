@@ -1,0 +1,169 @@
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.record-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.record-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(230, 57, 70, 0.3);
+}
+
+.record-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1rem;
+}
+
+.record-icon {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-right: 15px;
+  height: 50px;
+  width: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+}
+
+.icon-gold {
+  background: linear-gradient(135deg, #c9a84c, #f5d87a, #c9a84c);
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+}
+
+.icon-silver {
+  background: linear-gradient(135deg, #8a8a8a, #c0c0c0, #8a8a8a);
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.2);
+}
+
+.icon-broken {
+  background: linear-gradient(135deg, #3a3a3a, #555, #3a3a3a);
+  color: #999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+}
+
+.icon-star {
+  background: linear-gradient(135deg, var(--accent-primary), #ff6b7a);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+  font-size: 1.4rem;
+}
+
+.record-header h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.record-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.record-list li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--accent-primary);
+}
+
+.record-date {
+  display: block;
+  font-family: var(--font-heading);
+  color: var(--accent-primary);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.record-list p {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.record-list p b {
+  color: var(--text-primary);
+}
+
+/* Broken Records specific styles */
+.record-card.broken {
+  background: linear-gradient(to bottom right, var(--bg-secondary), rgba(30, 20, 20, 0.8));
+}
+
+.record-card.broken .record-list li {
+  border-left-color: #666;
+}
+
+.record-card.broken .record-date {
+  color: #888;
+}
+
+.footnote {
+  font-size: 0.85rem !important;
+  color: #777 !important;
+  font-style: italic;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+/* Achievements specific styles */
+.achievement-list {
+  list-style: none;
+  padding: 0;
+}
+
+.achievement-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 25px;
+}
+
+.achievement-list li:last-child {
+  border-bottom: none;
+}
+
+.achievement-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .record-card {
+    padding: 1.5rem;
+  }
+  .records-grid {
+    grid-template-columns: 1fr;
+  }
+  .record-header h3 {
+    font-size: 1.5rem;
+  }
+}

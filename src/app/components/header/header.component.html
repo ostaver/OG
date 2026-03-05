@@ -1,0 +1,22 @@
+<header class="header" [class.scrolled]="isScrolled" id="header">
+  <div class="header-navbar">
+    <a class="OG_top" (click)="scrollTo('header')">OG</a>
+    
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger" 
+            [class.active]="isMenuOpen" 
+            (click)="toggleMenu()"
+            aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <ul [class.open]="isMenuOpen">
+      <li *ngFor="let item of navItems">
+        <a [class.active]="activeSection === item.id"
+           (click)="scrollTo(item.id); closeMenu()">{{ item.label }}</a>
+      </li>
+    </ul>
+  </div>
+</header>
